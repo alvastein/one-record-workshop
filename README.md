@@ -5,13 +5,15 @@ Welcome to the IAM ONE Record Workshop, in this document you will find all the i
 ## Resources
 - [Official ONE Record Repository](https://github.com/IATA-Cargo/ONE-Record)
 - [API Specification](https://iata-cargo.github.io/ONE-Record/)
-- [Ontology](https://onerecord.iata.org/ns/cargo/)
+- [Ontology Web](https://onerecord.iata.org/ns/cargo/index-en.html)
+- [Ontology TTL file](https://github.com/IATA-Cargo/ONE-Record/blob/master/2023-12-standard/Data-Model/IATA-1R-DM-Ontology.ttl) Has to be opened with a tool like Protegé
 - [Data Model](https://git-scm.com/downloads)
 
 ## Prerequisites
 
 - [Docker](https://docs.docker.com/get-docker/) installed
 - [Git](https://git-scm.com/downloads) installed (Git is installed by default on latest Mac OSX computers)
+- [Protegé](https://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/) app to navigate the ontology (TTL file)
 
 ## Step by step guide
 
