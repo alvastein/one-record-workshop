@@ -7,7 +7,7 @@ Welcome to the IAM ONE Record Workshop, in this document you will find all the i
 - [API Specification](https://iata-cargo.github.io/ONE-Record/)
 - [Ontology web version](https://onerecord.iata.org/ns/cargo/index-en.html)
 - [Ontology TTL file](https://github.com/IATA-Cargo/ONE-Record/blob/master/2023-12-standard/Data-Model/IATA-1R-DM-Ontology.ttl) for a better ontology navigation open this file with a tool like Protegé.
-- [Data Model](assets/1R Data Model - December 2023 - 3.0.0.pdf)
+- [Data Model](https://github.com/alvastein/one-record-workshop/assets/1R Data Model - December 2023 - 3.0.0.pdf)
 
 ## Prerequisites
 
