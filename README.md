@@ -1,6 +1,6 @@
-# ONE Record Hackathon
+# IAM - ONE Record Workshop
 
-Welcome to the ONE Record Hackathon, in this document you will find all the instructions to run a NE:ONE Server and a NE:ONE Play instance on your personal computer
+Welcome to the IAM ONE Record Workshop, in this document you will find all the instructions to run a NE:ONE Server and a NE:ONE Play instance on your personal computer.
 
 ## Prerequisites
 
@@ -40,7 +40,7 @@ Welcome to the ONE Record Hackathon, in this document you will find all the inst
 |-|-|-|
 | ne-one server | [ne-one server](https://git.openlogisticsfoundation.org/wg-digitalaircargo/ne-one) | http://localhost:8080 |
 | ne-one view | [ne-one view](https://git.openlogisticsfoundation.org/wg-digitalaircargo/ne-one-view) | http://localhost:3000 |
-| ne-one play | [ne-one play](https://github.com/aloccid-iata/neoneplay) | http://localhost:3001 |
+| ne-one play | [ne-one play](https://github.com/alvastein/neoneplay) | http://localhost:3001 |
 | graphdb | GraphDB database as database backend for ne-one server | http://localhost:7200 |
 | keycloak | Identity provider for ne-one server to authenticate ONE Record clients and to obtain tokens for outgoing requests. <br/> **Preconfigured client_id:** neone-client<br/> **Preconfigured client_secret:** lx7ThS5aYggdsMm42BP3wMrVqKm9WpNY  | http://localhost:8989 <br/> (username/password: admin/admin)|
 
