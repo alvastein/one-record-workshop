@@ -12,11 +12,11 @@ Welcome to the ONE Record Hackathon, in this document you will find all the inst
 
 1) Clone the repository
    ```bash
-   git clone https://gitlab.com/iata-cargo/one-record-server-first-steps.git
+   git clone https://github.com/alvastein/one-record-workshop.git
    ```
 2) Switch to the directory to docker-compose
    ```bash
-   cd one-record-server-first-steps/docker-compose
+   cd one-record-workshop/docker-compose
    ```
 3) Start all services with [docker compose](https://docs.docker.com/compose/)
    ```bash
