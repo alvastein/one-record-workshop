@@ -3,8 +3,10 @@
 Welcome to the IAM ONE Record Workshop, in this document you will find all the instructions to run a NE:ONE Server and a NE:ONE Play instance on your personal computer.
 
 ## Resources
-- [ONE Record API](https://iata-cargo.github.io/ONE-Record/)
-- [Git](https://git-scm.com/downloads) installed (Git is installed by default on latest Mac OSX computers)
+- [Official ONE Record Repository](https://github.com/IATA-Cargo/ONE-Record)
+- [API Specification](https://iata-cargo.github.io/ONE-Record/)
+- [Ontology](https://onerecord.iata.org/ns/cargo/)
+- [Data Model](https://git-scm.com/downloads)
 
 ## Prerequisites
 
