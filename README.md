@@ -5,8 +5,7 @@ Welcome to the IAM ONE Record Workshop, in this document you will find all the i
 ## Prerequisites
 
 - [Docker](https://docs.docker.com/get-docker/) installed
-- [Docker Compose](https://docs.docker.com/compose/install/) installed (make sure you have compose V2)
-- [Git](https://git-scm.com/downloads) installed
+- [Git](https://git-scm.com/downloads) installed (Git is installed by default on latest Mac OSX computers)
 
 ## Step by step guide
 
