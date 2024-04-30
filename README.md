@@ -13,6 +13,7 @@ Welcome to the IAM ONE Record Workshop, in this document you will find all the i
 
 - [Docker](https://docs.docker.com/get-docker/) installed
 - [Git](https://git-scm.com/downloads) installed (Git is installed by default on latest Mac OSX computers)
+- [Postman](https://www.postman.com/downloads/) installed
 - [Protegé](https://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/) is optional. App to navigate the ontology TTL file
 
 ## Step by step guide
