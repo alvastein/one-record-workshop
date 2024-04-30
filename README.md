@@ -101,7 +101,7 @@ To have you up and running we prepared a Postman collection. You will need to in
 
     - Organization Name: <Choose a name (any string is accepted)>
     - Protocol: http
-    - Host: http://localhost:8080  
+    - Host: localhost:8080  
     - Token : <Use the postman collection to generate a token and copy it here (follow the previous paragraph)>
     - Color : pick up a random color
 
