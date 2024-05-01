@@ -52,46 +52,6 @@ Welcome to the IAM ONE Record Workshop, in this document you will find all the i
 | graphdb | GraphDB database as database backend for ne-one server | http://localhost:7200 |
 | keycloak | Identity provider for ne-one server to authenticate ONE Record clients and to obtain tokens for outgoing requests. <br/> **Preconfigured client_id:** neone-client<br/> **Preconfigured client_secret:** lx7ThS5aYggdsMm42BP3wMrVqKm9WpNY  | http://localhost:8989 <br/> (username/password: admin/admin)|
 
-## Postman Collection
-
-To have you up and running we prepared a Postman collection. You will need to install Postman or a compatible software in order to use it.
-
-1. [Download the Postman Collection here.](./assets/postman/Hackathon.postman_collection.json) It will open a new github page, use the download button to get the file
-
-2. [Download the Postman Environment here](./assets/postman/Hackathon.postman_environment.json). It will open a new github page, use the download button to get the file
-
-3. Import the Environment in Postman
-
-![Image9](./assets/image/image9.PNG)
-
-4. Import the Collection in Postman
-
-![Image8](./assets/image/image8.PNG)
-
-5. In the Environments tab, select Hackathon environment and set the baseUrlKeyCloak to http://localhost:8989.
-
-![Image10](./assets/image/image10.PNG)
-
-6. Set the baseUrlShipper,baseUrlForwarder and baseUrlAirline to http://localhost:8080.
-
-![Image14](./assets/image/image14.PNG)
-
-7. Select Collections on the right menu and open the Hackathon collection already imported
-
-8. Use the Token Request call to generate and access token
-
-![Image16](./assets/image/image16.PNG)
-
-9. Copy the access token (it might be a long string, please copy the full content) in the Authorization tab of the Get ServerInformation and run the call
-
-![Image15](./assets/image/image15.PNG)
-
-10. If everything is setup correctly, you will see the server information of the AWS server
-
-11. Copy the access token in Authentication tab of the Example Workflow folder
-
-12. Run the calls one by one to create the objects. The order is important as each call is connected to the previous one.
-
 ## Add NE:ONE server into NE:ONE Play
 
 1. Connect to NE:ONE Play http://localhost:3001 
@@ -108,5 +68,46 @@ To have you up and running we prepared a Postman collection. You will need to in
 
     ![Image17](./assets/image/neone_setup.PNG)
 
-4. Now you can start using NE:ONE Play. 
+4. Now you can start using NE:ONE Play.
 
+## Postman Collection
+
+You can add and edit objects directly in NE:ONE Play. You can also trigger the API endpoints with a tool like Postman, and then see the objects in NE:ONE Play.
+We prepared a Postman collection with a few common API calls to get you up and running. You will need to install Postman or a compatible software in order to use it.
+
+1. [Download the Postman Collection here.](./assets/postman/Hackathon.postman_collection.json) It will open a new github page, use the download button to get the file
+
+2. [Download the Postman Environment here](./assets/postman/Hackathon.postman_environment.json). It will open a new github page, use the download button to get the file
+
+3. Import the Environment in Postman
+
+![Image9](./assets/image/image9.PNG)
+
+4. Import the Collection in Postman
+
+![Image8](./assets/image/image8.PNG)
+
+5. In the Environments tab, select Workshop environment and set the baseUrlKeyCloak to http://localhost:8989.
+
+![Image10](./assets/image/image10.PNG)
+
+6. Set the baseUrlBooker,baseUrlDestinationAgent and baseUrlOriginAgent to http://localhost:8080.
+  Select 
+
+![Image14](./assets/image/image14.PNG)
+
+7. Select Collections on the right menu and open the Workshop collection already imported
+
+8. Use the Token Request call to generate an access token
+
+![Image16](./assets/image/image16.PNG)
+
+9. Copy the access token (it might be a long string, please copy the full content) in the Authorization tab of the Get ServerInformation and run the call
+
+![Image15](./assets/image/image15.PNG)
+
+10. If everything is setup correctly, you will see the server information of the AWS server
+
+11. Copy the access token in Authentication tab of the Example Workflow folder
+
+Happy data sharing!
