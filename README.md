@@ -2,19 +2,19 @@
 
 Welcome to the IAM ONE Record Workshop, in this document you will find all the instructions to run a NE:ONE Server and a NE:ONE Play instance on your personal computer.
 
-## Resources
-- [ONE Record Data Model](https://github.com/alvastein/one-record-workshop/blob/main/assets/1R%20Data%20Model%20-%20December%202023%20-%203.0.0.pdf)
-- [ONE Record API Specification](https://iata-cargo.github.io/ONE-Record/)
-- [Ontology web version](https://onerecord.iata.org/ns/cargo/index-en.html)
-- [Ontology TTL file](https://github.com/IATA-Cargo/ONE-Record/blob/master/2023-12-standard/Data-Model/IATA-1R-DM-Ontology.ttl) for a better ontology navigation open this file with a tool like Protegé.
-- [Official ONE Record Repository](https://github.com/IATA-Cargo/ONE-Record)
-
 ## Prerequisites
 
 - Download and install [Docker](https://docs.docker.com/get-docker/). Setting up an account is not required.
 - For Windows and some Linux computers: download and install [Git](https://git-scm.com/downloads). Setting up an account is not required. Git is installed by default on latest versions of Mac OSX.
 - Download, install [Postman](https://www.postman.com/downloads/) and create a free user account.
 - Optional: use a tool like [Protegé](https://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/) to navigate the ontology TTL file.
+
+## Resources
+- [ONE Record Data Model](https://github.com/alvastein/one-record-workshop/blob/main/assets/1R%20Data%20Model%20-%20December%202023%20-%203.0.0.pdf)
+- [ONE Record API Specification](https://iata-cargo.github.io/ONE-Record/)
+- [Ontology web version](https://onerecord.iata.org/ns/cargo/index-en.html)
+- [Ontology TTL file](https://github.com/IATA-Cargo/ONE-Record/blob/master/2023-12-standard/Data-Model/IATA-1R-DM-Ontology.ttl) for a better ontology navigation open this file with a tool like Protegé.
+- [Official ONE Record Repository](https://github.com/IATA-Cargo/ONE-Record)
 
 ## Step by step guide
 
