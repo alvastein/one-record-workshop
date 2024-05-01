@@ -11,22 +11,22 @@ Welcome to the IAM ONE Record Workshop, in this document you will find all the i
 
 ## Prerequisites
 
-- [Docker](https://docs.docker.com/get-docker/) installed
-- [Git](https://git-scm.com/downloads) installed (Git is installed by default on latest Mac OSX computers)
-- [Postman](https://www.postman.com/downloads/) installed
-- [Protegé](https://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/) is optional. App to navigate the ontology TTL file
+- Download and install [Docker](https://docs.docker.com/get-docker/). Setting up an account is not required.
+- For Windows and some Linux computers: download and install [Git](https://git-scm.com/downloads). Setting up an account is not required. Git is installed by default on latest versions of Mac OSX.
+- Download, install [Postman](https://www.postman.com/downloads/) and create a free user account.
+- Optional: use a tool like [Protegé](https://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/) to navigate the ontology TTL file.
 
 ## Step by step guide
 
-1) Clone the repository
+1) Clone this repository by running the following command on a terminal window, in a folder of your choice:
    ```bash
    git clone https://github.com/alvastein/one-record-workshop.git
    ```
-2) Switch to the directory to docker-compose
+2) On the terminal, switch to the directory to docker-compose:
    ```bash
    cd one-record-workshop/docker-compose
    ```
-3) Start all services with [docker compose](https://docs.docker.com/compose/)
+3) On the terminal, start all services with the following command:
    ```bash
    docker compose up -d
    ```
@@ -40,7 +40,7 @@ Welcome to the IAM ONE Record Workshop, in this document you will find all the i
     ✔ Container docker-compose-graph-db-setup-1 Started 0.0s
    ```
 5) Try to access the ONE Record Server by  http://localhost:8080 using your favorite browser. 
-   You should see a HTTP Error 401, because you did not authenticate yet. But this confirms that the ONE Record Server is up and running.
+   You should see a HTTP Error 401 or a blank page, because you did not authenticate yet. This confirms that the ONE Record Server is up and running.
 
 # Overview of services
 
