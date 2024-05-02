@@ -79,35 +79,20 @@ We prepared a Postman collection with a few common API calls to get you up and r
 
 2. [Download the Postman Environment here](./assets/postman/Hackathon.postman_environment.json). It will open a new github page, use the download button to get the file
 
-3. Import the Environment in Postman
+3. Import the Environment in Postman (drag and drop file)
 
-![Image9](./assets/image/image9.PNG)
+4. Import the Collection in Postman (drag and drop file)
 
-4. Import the Collection in Postman
+5. In the Environments tab, select Workshop environment from the dropdown on the upper right corner.
 
-![Image8](./assets/image/image8.PNG)
-
-5. In the Environments tab, select Workshop environment and set the baseUrlKeyCloak to http://localhost:8989.
-
-![Image10](./assets/image/image10.PNG)
-
-6. Set the baseUrlBooker,baseUrlDestinationAgent and baseUrlOriginAgent to http://localhost:8080.
-  Select 
-
-![Image14](./assets/image/image14.PNG)
-
-7. Select Collections on the right menu and open the Workshop collection already imported
+6. Select Collections on the right menu and open the Workshop collection already imported
 
 8. Use the Token Request call to generate an access token
 
-![Image16](./assets/image/image16.PNG)
-
 9. Copy the access token (it might be a long string, please copy the full content) in the Authorization tab of the Get ServerInformation and run the call
-
-![Image15](./assets/image/image15.PNG)
 
 10. If everything is setup correctly, you will see the server information of the AWS server
 
-11. Copy the access token in Authentication tab of the Example Workflow folder
+11. Copy the access token in Authentication tab of the Workshop folder
 
 Happy data sharing!
