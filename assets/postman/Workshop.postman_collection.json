@@ -1,0 +1,846 @@
+{
+	"info": {
+		"_postman_id": "04bb4bea-d356-4284-abbb-72d829fd292f",
+		"name": "Workshop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33467733"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Token Request",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "neone-client",
+								"password": "lx7ThS5aYggdsMm42BP3wMrVqKm9WpNY"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "neone-client",
+									"type": "text"
+								},
+								{
+									"key": "scope",
+									"value": "ne-one-resource-server/openid",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": "{{baseUrlKeyCloak}}/realms/neone/protocol/openid-connect/token"
+					},
+					"response": []
+				},
+				{
+					"name": "Get ServerInformation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGYzdaSHZUNGozbldNenZkX2xuYUsySGZWWnUtYWtBLTB0TGMwLVgwc1BZIn0.eyJleHAiOjE3MTQ2NjQ4OTMsImlhdCI6MTcxNDYyODg5MywianRpIjoiYjlkMDMxNmQtZjhlMC00OGE3LTkwNzEtMjQzZmEzMTFkODg0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4OTg5L3JlYWxtcy9uZW9uZSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiIwYWU4OThmMy1kMjQ4LTRlYWMtODY4MS1iMDM4MWM4MmQ2YzAiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJuZW9uZS1jbGllbnQiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1uZW9uZSIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwiY2xpZW50SG9zdCI6IjE5Mi4xNjguNjUuMSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibG9naXN0aWNzX2FnZW50X3VyaSI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9sb2dpc3RpY3Mtb2JqZWN0cy9fZGF0YS1ob2xkZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtbmVvbmUtY2xpZW50IiwiY2xpZW50QWRkcmVzcyI6IjE5Mi4xNjguNjUuMSIsImNsaWVudF9pZCI6Im5lb25lLWNsaWVudCJ9.4Emk0xEn2K7N-Zp1Jote4IYGB__Hxp6we5j1vGW8gT8hQpezUOCWmd3-AwfJDQWwOaVgPDt_N5CHft4w8Ik7Rlxys6iWEB0dvLOu2j2UH-SX1WlLIbCJb3KV6wg4A_dP2Ow-aiJnX8zrsf9PABrJw2cU3tkRthtNGU0CvDIF4i9cBw22ynHEQeQ6Gw6y3beD622feb1HQdXYzDbmpuFkvsaASHkIbf_WF78MAfzSzM1rIi14fy-nsXbTDsNWutMZldO4fxbhOR9ldUwhOl_tc_AcJQ81E2dGozakD8kngJP6LPXu1W6zywWuRS8qkOXyJWwk26J24d1dX4rOKt45wg"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/ld+json",
+								"type": "default"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/ld+json",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrlOneRecord}}"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HHG type Chair",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", () => {\r",
+							"  pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Location header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Location\");\r",
+							"});\r",
+							"pm.test(\"Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Type\");\r",
+							"});\r",
+							"\r",
+							"var req = JSON.parse(request.data);\r",
+							"pm.collectionVariables.set(\"productChair\", pm.response.headers.get(\"Location\").split(\"/\").pop());\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"@context\": {\n        \"cargo\": \"https://onerecord.iata.org/ns/cargo#\"\n    },\n    \"@type\": \"cargo:Product\",\n    \"cargo:description\": \"Chair\"\n    \n    /* Add it with a patch after the item is created\n    \"cargo:descriptionForItems\": {\n        \"@type\": \"cargo:Item\",\n        \"@id\": \"{{baseUrl}}/logistics-objects/{{itemId}}\"\n    }*/\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrlOneRecord}}/logistics-objects"
+			},
+			"response": []
+		},
+		{
+			"name": "HHG type Book",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", () => {\r",
+							"  pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Location header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Location\");\r",
+							"});\r",
+							"pm.test(\"Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Type\");\r",
+							"});\r",
+							"\r",
+							"var req = JSON.parse(request.data);\r",
+							"pm.collectionVariables.set(\"productBook\", pm.response.headers.get(\"Location\").split(\"/\").pop());\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/ld+json; version=2.0.0-dev",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/ld+json; version=2.0.0-dev",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"@context\": {\n        \"cargo\": \"https://onerecord.iata.org/ns/cargo#\"\n    },\n    \"@type\": \"cargo:Product\",\n    \"cargo:description\": \"Book\",\n    \"cargo:uniqueIdentifier\": \"0020001\"\n    /* Add it with a patch after the item is created\n    \"cargo:descriptionForItems\": {\n        \"@type\": \"cargo:Item\",\n        \"@id\": \"{{baseUrl}}/logistics-objects/{{itemId}}\"\n    }*/\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrlOneRecord}}/logistics-objects"
+			},
+			"response": []
+		},
+		{
+			"name": "Identify a Chair",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", () => {\r",
+							"  pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Location header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Location\");\r",
+							"});\r",
+							"pm.test(\"Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Type\");\r",
+							"});\r",
+							"\r",
+							"var req = JSON.parse(request.data);\r",
+							"pm.collectionVariables.set(\"itemChair\", pm.response.headers.get(\"Location\").split(\"/\").pop());\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/ld+json; version=2.0.0-dev",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/ld+json; version=2.0.0-dev",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"@context\": {\n        \"cargo\": \"https://onerecord.iata.org/ns/cargo#\"\n    },\n    \"@type\": \"cargo:Item\",\n    \"cargo:itemQuantity\": {\n        \"@type\": \"cargo:Value\",\n        \"cargo:unit\": \"Pieces\",\n        \"cargo:numericalValue\": 1\n    },\n    \"cargo:describedByProduct\": {\n        \"@id\": \"{{baseUrlOneRecord}}/logistics-objects/{{productChair}}\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrlOneRecord}}/logistics-objects"
+			},
+			"response": []
+		},
+		{
+			"name": "Identify Books",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", () => {\r",
+							"  pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Location header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Location\");\r",
+							"});\r",
+							"pm.test(\"Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Type\");\r",
+							"});\r",
+							"\r",
+							"var req = JSON.parse(request.data);\r",
+							"pm.collectionVariables.set(\"itemBook\", pm.response.headers.get(\"Location\").split(\"/\").pop());\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/ld+json; version=2.0.0-dev",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/ld+json; version=2.0.0-dev",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"@context\": {\n        \"cargo\": \"https://onerecord.iata.org/ns/cargo#\"\n    },\n    \"@type\": \"cargo:Item\",\n    \"cargo:itemQuantity\": {\n        \"@type\": \"cargo:Value\",\n        \"cargo:unit\": \"Pieces\",\n        \"cargo:numericalValue\": 10\n    },\n    \"cargo:describedByProduct\": {\n        \"@id\": \"{{baseUrlOneRecord}}/logistics-objects/{{productBook}}\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrlOneRecord}}/logistics-objects"
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Piece with Chair",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", () => {\r",
+							"  pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Location header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Location\");\r",
+							"});\r",
+							"pm.test(\"Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Type\");\r",
+							"});\r",
+							"\r",
+							"var req = JSON.parse(request.data);\r",
+							"pm.collectionVariables.set(\"pieceChair\", pm.response.headers.get(\"Location\").split(\"/\").pop());"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/ld+json; version=2.0.0-dev",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/ld+json; version=2.0.0-dev",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"@context\": {\n        \"cargo\": \"https://onerecord.iata.org/ns/cargo#\"\n    },\n    \"@type\": \"cargo:Piece\",\n    \"cargo:goodsDescription\": \"Box 45: Chair\",\n    \"cargo:containedItems\": [\n        {\n            \"@id\": \"{{baseUrlOneRecord}}/logistics-objects/{{itemChair}}\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrlOneRecord}}/logistics-objects"
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Piece with Books",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", () => {\r",
+							"  pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Location header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Location\");\r",
+							"});\r",
+							"pm.test(\"Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Type\");\r",
+							"});\r",
+							"\r",
+							"var req = JSON.parse(request.data);\r",
+							"pm.collectionVariables.set(\"pieceBook\", pm.response.headers.get(\"Location\").split(\"/\").pop());\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/ld+json; version=2.0.0-dev",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/ld+json; version=2.0.0-dev",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"@context\": {\n        \"cargo\": \"https://onerecord.iata.org/ns/cargo#\"\n    },\n    \"@type\": \"cargo:Piece\",\n    \"cargo:goodsDescription\": \"Box 50: Cooking books\",\n    \"cargo:containedItems\": [{\n        \"@id\": \"{{baseUrlOneRecord}}/logistics-objects/{{itemBook}}\"\n    }],\n    \"cargo:handlingInstructions\": [\n        {\n            \"@type\": \"cargo:HandlingInstructions\",\n            \"cargo:serviceType\": \"SPH\",\n            \"cargo:serviceDescription\": \"Valuable Cargo\",\n            \"cargo:serviceTypeCode\": \"VAL\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrlOneRecord}}/logistics-objects"
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Liftvan",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", () => {\r",
+							"  pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Location header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Location\");\r",
+							"});\r",
+							"pm.test(\"Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Type\");\r",
+							"});\r",
+							"\r",
+							"var req = JSON.parse(request.data);\r",
+							"pm.collectionVariables.set(\"liftvan\", pm.response.headers.get(\"Location\").split(\"/\").pop());\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/ld+json; version=2.0.0-dev",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/ld+json; version=2.0.0-dev",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"@context\": {\n        \"cargo\": \"https://onerecord.iata.org/ns/cargo#\"\n    },\n    \"@type\": \"cargo:Piece\",\n    \"cargo:goodsDescription\": \"Liftvan with Books and chairs\",\n    \"cargo:containedItems\": [\n        {\n            \"@id\": \"{{baseUrlOneRecord}}/logistics-objects/{{pieceChair}}\"\n        },\n        {\n            \"@id\": \"{{baseUrlOneRecord}}/logistics-objects/{{pieceBook}}\"\n        }\n    ],\n    \"cargo:handlingInstructions\": [\n        {\n            \"@type\": \"cargo:HandlingInstructions\",\n            \"cargo:serviceType\": \"SPH\",\n            \"cargo:serviceDescription\": \"Valuable Cargo\",\n            \"cargo:serviceTypeCode\": \"VAL\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrlOneRecord}}/logistics-objects"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Organization OA",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", () => {\r",
+							"  pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Location header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Location\");\r",
+							"});\r",
+							"pm.test(\"Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Type\");\r",
+							"});\r",
+							"\r",
+							"var req = JSON.parse(request.data);\r",
+							"pm.collectionVariables.set(\"OrganizationOA\", pm.response.headers.get(\"Location\").split(\"/\").pop());\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/ld+json; version=2.0.0-dev",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/ld+json; version=2.0.0-dev",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"@context\": {\n        \"cargo\": \"https://onerecord.iata.org/ns/cargo#\"\n    },\n    \"@type\": \"cargo:Organization\",\n    \"cargo:name\": \"Origin Agent ABC\",\n    \"cargo:shortName\": \"OA ABC\",\n    \"cargo:contactPersons\": [\n        {\n            \"@type\": \"cargo:Person\",\n            \"cargo:firstName\": \"Jane\",\n            \"cargo:lastName\": \"Doe\",\n            \"cargo:salutation\": \"Ms\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrlOneRecord}}/logistics-objects"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Organization DA",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", () => {\r",
+							"  pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Location header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Location\");\r",
+							"});\r",
+							"pm.test(\"Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Type\");\r",
+							"});\r",
+							"\r",
+							"var req = JSON.parse(request.data);\r",
+							"pm.collectionVariables.set(\"OrganizationDA\", pm.response.headers.get(\"Location\").split(\"/\").pop());\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/ld+json; version=2.0.0-dev",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/ld+json; version=2.0.0-dev",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"@context\": {\n        \"cargo\": \"https://onerecord.iata.org/ns/cargo#\"\n    },\n    \"@type\": \"cargo:Organization\",\n    \"cargo:name\": \"Destination Agent XYZ\",\n    \"cargo:shortName\": \"DA XYZ\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrlOneRecord}}/logistics-objects"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Shipment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", () => {\r",
+							"  pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Location header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Location\");\r",
+							"});\r",
+							"pm.test(\"Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Type\");\r",
+							"});\r",
+							"\r",
+							"var req = JSON.parse(request.data);\r",
+							"pm.collectionVariables.set(\"shipmentSmith\", pm.response.headers.get(\"Location\").split(\"/\").pop());"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/ld+json; version=2.0.0-dev",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/ld+json; version=2.0.0-dev",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"@context\": {\n        \"cargo\": \"https://onerecord.iata.org/ns/cargo#\"\n    },\n    \"@type\": \"cargo:Shipment\",\n    \"cargo:goodsDescription\": \"Mr. Smith France to Australia\",\n    \"cargo:totalGrossWeight\": {\n        \"@type\": \"cargo:Value\",\n        \"cargo:unit\": \"KG\",\n        \"cargo:numericalValue\": 50\n    },\n    \"cargo:totalDimensions\": {\n        \"cargo:height\": {\n            \"@type\": \"cargo:Value\",\n            \"cargo:unit\": \"M\",\n            \"cargo:numericalValue\": 3\n        },\n        \"cargo:length\": {\n            \"@type\": \"cargo:Value\",\n            \"cargo:unit\": \"M\",\n            \"cargo:numericalValue\": 2\n        },\n        \"cargo:width\": {\n            \"@type\": \"cargo:Value\",\n            \"cargo:unit\": \"M\",\n            \"cargo:numericalValue\": 1\n        },\n        \"cargo:volume\": {\n            \"@type\": \"cargo:Value\",\n            \"cargo:unit\": \"MC\",\n            \"cargo:numericalValue\": 6\n        }\n    },\n    \"cargo:shipmentOfPieces\": [\n        {\n            \"@id\": \"{{baseUrlOneRecord}}/logistics-objects/{{pieceChair}}\"\n        },\n        {\n            \"@id\": \"{{baseUrlOneRecord}}/logistics-objects/{{pieceBook}}\"\n        }\n    ],\n    \"cargo:involvedParties\": [\n        {\n            \"@type\": \"cargo:Party\",\n            \"cargo:role\": \"Origin Agent\",\n            \"cargo:organization\": {\n                \"@id\": \"{{baseUrlOneRecord}}/logistics-objects/{{OrganizationOA}}\"\n            }\n        },\n        {\n            \"@type\": \"cargo:Party\",\n            \"cargo:role\": \"Destination Agent\",\n            \"cargo:organization\": {\n                \"@id\": \"{{baseUrlOneRecord}}/logistics-objects/{{OrganizationOA}}\"\n            }\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrlOneRecord}}/logistics-objects"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Departure Event",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/ld+json; version=2.0.0-dev",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/ld+json; version=2.0.0-dev",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"@context\": {\n        \"cargo\": \"https://onerecord.iata.org/ns/cargo#\"\n    },\n    \"@type\": \"cargo:LogisticsEvent\",\n    \"cargo:creationDate\": {\n        \"@type\": \"http://www.w3.org/2001/XMLSchema#dateTime\",\n        \"@value\": \"2023-04-01T10:38:01.000Z\"\n    },\n    \"cargo:eventDate\": {\n        \"@type\": \"http://www.w3.org/2001/XMLSchema#dateTime\",\n        \"@value\": \"2023-04-01T10:38:01.000Z\"\n    },\n    \"cargo:eventCode\": {\n        \"@type\": \"cargo:CodeListElement\",\n        \"cargo:code\": \"DEP\",\n        \"cargo:codeListName\": \"Departure\"\n    },\n    \"cargo:eventName\": \"Consignment departed on a specific flight\",\n    \"cargo:eventTimeType\": {\n        \"@id\": \"cargo:ACTUAL\",\n        \"@type\": \"cargo:EventTimeType\"\n    },\n    \"cargo:partialEventIndicator\": false,\n    \"cargo:eventFor\": {\n        \"@type\": \"cargo:Shipment\",\n        \"@id\": \"{{baseUrlOneRecord}}/logistics-objects/{{shipmentSmith}}\"\n    },\n    \"cargo:recordingOrganization\": {\n        \"@type\": \"cargo:Company\",\n        \"@id\": \"{{baseUrlShipper}}/logistics-objects/_data-holder\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrlOneRecord}}/logistics-objects/:logisticObjectId/logistics-events",
+					"host": [
+						"{{baseUrlOneRecord}}"
+					],
+					"path": [
+						"logistics-objects",
+						":logisticObjectId",
+						"logistics-events"
+					],
+					"variable": [
+						{
+							"key": "logisticObjectId",
+							"value": "shipmentFranceAustralia"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "productiPhone",
+			"value": ""
+		},
+		{
+			"key": "moonAir",
+			"value": ""
+		},
+		{
+			"key": "productRolex",
+			"value": ""
+		},
+		{
+			"key": "itemiPhone",
+			"value": ""
+		},
+		{
+			"key": "productChair",
+			"value": ""
+		},
+		{
+			"key": "productBook",
+			"value": ""
+		},
+		{
+			"key": "itemChair",
+			"value": ""
+		},
+		{
+			"key": "itemBook",
+			"value": ""
+		},
+		{
+			"key": "pieceHHG",
+			"value": ""
+		},
+		{
+			"key": "pieceChair",
+			"value": ""
+		},
+		{
+			"key": "pieceBook",
+			"value": ""
+		},
+		{
+			"key": "liftvan",
+			"value": ""
+		},
+		{
+			"key": "shipmentSmith",
+			"value": ""
+		},
+		{
+			"key": "changeShipment",
+			"value": ""
+		},
+		{
+			"key": "shipmentiPhone",
+			"value": ""
+		},
+		{
+			"key": "contactPerson",
+			"value": ""
+		},
+		{
+			"key": "OA",
+			"value": ""
+		},
+		{
+			"key": "OrganizationOA",
+			"value": ""
+		},
+		{
+			"key": "OrganizationDA",
+			"value": ""
+		}
+	]
+}
