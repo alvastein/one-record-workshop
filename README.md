@@ -55,7 +55,11 @@ Interacting with the NE:ONE Server, through NE:ONE Play or direct API calls from
 
 We prepared a Postman collection with a few common API calls to get you up and running, including an endpoint to get an access token. Follow these steps:
 1. [Download the Postman Collection](./assets/postman/Workshop.postman_collection.json) It will open a new github page, use the download button.
-2. Open Postman and import the Collection.
+2. Open Postman and import the Collection with drag and drop.
+3. Create a new Environment and name it ONE Record
+![Create Environment](https://github.com/alvastein/one-record-workshop/assets/168312567/a0c5fab6-ccb9-476d-a689-237cae2eb73e)
+5. Create the variables baseUrlKeycloak and baseUrlOneRecord and set their current values to localhost:8989 and localhost:8080 respectively. Click save and choose the ONE Record environment from the dropdow list.
+6. 
 
 
 Follow these steps to generate a token using Postman:
