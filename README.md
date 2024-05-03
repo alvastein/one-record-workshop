@@ -40,7 +40,7 @@ Welcome to the IAM ONE Record Workshop, in this document you will find all the i
 5) Try to access the ONE Record Server by  http://localhost:8080 using your favorite browser. 
    You should see a HTTP Error 401 or a blank page, because you did not authenticate yet. This confirms that the ONE Record Server is up and running.
 
-# Overview of services
+## Overview of services
 
 | Name | Description | Base URL / Admin UI |
 |-|-|-|
@@ -55,69 +55,40 @@ Interacting with the NE:ONE Server, through NE:ONE Play or direct API calls from
 
 We prepared a Postman collection with a few common API calls to get you up and running, including an endpoint to get an access token. Follow these steps:
 1. [Download the Postman Collection](./assets/postman/Workshop.postman_collection.json) It will open a new github page, use the download button.
+![Download Postman Collection](https://github.com/alvastein/one-record-workshop/assets/168312567/1bb2c3d8-d867-4408-b8a4-6c6702113f29)
+
 2. Open Postman and import the Collection with drag and drop.
+![Import Postman Collection](https://github.com/alvastein/one-record-workshop/assets/168312567/fdf9165e-9eea-45f3-b49b-6f9cbdb885cd)
+
 3. Create a new Environment and name it ONE Record
-![Create Environment](https://github.com/alvastein/one-record-workshop/assets/168312567/a0c5fab6-ccb9-476d-a689-237cae2eb73e)
-5. Create the variables baseUrlKeycloak and baseUrlOneRecord and set their current values to localhost:8989 and localhost:8080 respectively. Click save and choose the ONE Record environment from the dropdow list.
-6. 
+![Create Environment](https://github.com/alvastein/one-record-workshop/assets/168312567/abc2bfcb-1795-4f02-a641-e253358c3687)
 
+4. Create the variables baseUrlKeycloak and baseUrlOneRecord and set their current values to localhost:8989 and localhost:8080 respectively. Click save and choose the ONE Record environment from the dropdow list.
+![Create Environment Variables](https://github.com/alvastein/one-record-workshop/assets/168312567/a2621ccd-cd95-46c9-83c3-87c2dc5855ea)
 
-Follow these steps to generate a token using Postman:
+5. Trigger the Token Request endpoint and copy the access_token from the response.
+![Get and copy token](https://github.com/alvastein/one-record-workshop/assets/168312567/0a65be1d-b068-4f8e-8b80-e3c6c4f15910)
 
-This is the easiest as everything has been set up in the Postman Collection. See next section for step-by-step instructions.
+6. Go to the parent folder ONE Record, select the Authorization tab, select Bearer Token from the Auth Type dropdown list, and paste the access_token in the token field.
+![Paste token in folder](https://github.com/alvastein/one-record-workshop/assets/168312567/f9928788-32d6-4fbc-a591-e1166f4c554b)
 
-### Get token directly from Keycloak
-1. Access you local Keycloak instance here http://localhost:8989.
-2. Login with username: Admin and password: Admin
-    ![Image17](./assets/image/neone_setup.PNG)
-3.  
+7. Run the calls one by one to create the objects. The order is important as each call is connected to the previous one.
 
-You can get a token directly in your local instance of Keycloak
-can be accessed through iuts base URL .
+## Add the NE:ONE server into NE:ONE Play
 
+1. Connect to NE:ONE Play http://localhost:3001 and click on the setting button
+![NE ONE Play Settings](https://github.com/alvastein/one-record-workshop/assets/168312567/acbf2874-06f0-403e-b6d5-914607df0e13)
 
-## Postman Collection
-
-You can either 
-You can add and edit objects directly in NE:ONE Play. You can also trigger the API endpoints with a tool like Postman, and then see the objects in NE:ONE Play.
-We prepared a Postman collection with a few common API calls to get you up and running. You will need to install Postman or a compatible software in order to use it.
-
-1. [Download the Postman Collection here.](./assets/postman/Workshop.postman_collection.json) It will open a new github page, use the download button to get the file
-
-2. [Download the Postman Environment here](./assets/postman/Workshop.postman_environment.json). It will open a new github page, use the download button to get the file
-
-3. Import the Environment in Postman (drag and drop file)
-
-4. Import the Collection in Postman (drag and drop file)
-
-5. In the Environments tab, select Workshop environment from the dropdown on the upper right corner.
-
-6. Select Collections on the right menu and open the Workshop collection already imported
-
-8. Use the Token Request call to generate an access token
-
-9. Copy the access token (it might be a long string, please copy the full content) in the Authorization tab of the Get ServerInformation and run the call
-
-10. If everything is setup correctly, you will see the server information of the AWS server
-
-11. Copy the access token in Authentication tab of the Workshop folder
-
-## Add NE:ONE server into NE:ONE Play
-
-1. Connect to NE:ONE Play http://localhost:3001 
-
-2. Click on the setting button in the top-right corner (cog icon)
-
-3. Add your server following this instruction:
-
+2. Add your server with these settings
     - Organization Name: <Choose a name (any string is accepted)>
     - Protocol: http
     - Host: localhost:8080  
-    - Token : <Use the postman collection to generate a token and copy it here (follow the previous paragraph)>
+    - Token : Use the same token generated with the Postman Collection (go to Postman to copy it).
     - Color : pick up a random color
+![Create Organization](https://github.com/alvastein/one-record-workshop/assets/168312567/04c07578-c28a-4390-9c53-10056e4be4b3)
 
-    ![Image17](./assets/image/neone_setup.PNG)
+3. Now you can start creating objects using NE:ONE Play. Create your first object by selecting its type and organization from the dropdown lists
+4. Click the plus button to save
 
-4. Now you can start using NE:ONE Play.
 
 Happy data sharing!
