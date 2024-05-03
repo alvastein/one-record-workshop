@@ -4,6 +4,7 @@ Welcome to the IAM ONE Record Workshop, in this document you will find all the i
 
 ## Key ONE Record Resources
 
+Familiarize yourself with the key ONE Record resources:
 - [Data Model and Ontology Visualizer](https://aloccid-iata.github.io/ontology_visualizer/)
 - [API Specification and Security](https://iata-cargo.github.io/ONE-Record/)
 - [Official ONE Record Repository](https://github.com/IATA-Cargo/ONE-Record)
