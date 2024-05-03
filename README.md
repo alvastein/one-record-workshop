@@ -75,9 +75,9 @@ Welcome to the IAM ONE Record Workshop, in this document you will find all the i
 You can add and edit objects directly in NE:ONE Play. You can also trigger the API endpoints with a tool like Postman, and then see the objects in NE:ONE Play.
 We prepared a Postman collection with a few common API calls to get you up and running. You will need to install Postman or a compatible software in order to use it.
 
-1. [Download the Postman Collection here.](./assets/postman/Hackathon.postman_collection.json) It will open a new github page, use the download button to get the file
+1. [Download the Postman Collection here.](./assets/postman/Workshop.postman_collection.json) It will open a new github page, use the download button to get the file
 
-2. [Download the Postman Environment here](./assets/postman/Hackathon.postman_environment.json). It will open a new github page, use the download button to get the file
+2. [Download the Postman Environment here](./assets/postman/Workshop.postman_environment.json). It will open a new github page, use the download button to get the file
 
 3. Import the Environment in Postman (drag and drop file)
 
