@@ -70,11 +70,11 @@ We prepared a Postman collection with a few common API calls to get you up and r
 ![Get and copy token](https://github.com/alvastein/one-record-workshop/assets/168312567/0a65be1d-b068-4f8e-8b80-e3c6c4f15910)
 
 6. Go to the parent folder ONE Record, select the Authorization tab, select Bearer Token from the Auth Type dropdown list, and paste the access_token in the token field.
-![Paste token in folder](https://github.com/alvastein/one-record-workshop/assets/168312567/f9928788-32d6-4fbc-a591-e1166f4c554b)
+![6 Paste token in folder](https://github.com/alvastein/one-record-workshop/assets/168312567/4c25da31-3ce6-47cc-a208-6661035ba9e9)
 
 7. Run the calls one by one to create the objects. The order is important as each call is connected to the previous one.
 
-## Add the NE:ONE server into NE:ONE Play
+## Add the NE:ONE server into NE:ONE Play and create your first object
 
 1. Connect to NE:ONE Play http://localhost:3001 and click on the setting button
 ![NE ONE Play Settings](https://github.com/alvastein/one-record-workshop/assets/168312567/acbf2874-06f0-403e-b6d5-914607df0e13)
@@ -87,8 +87,15 @@ We prepared a Postman collection with a few common API calls to get you up and r
     - Color : pick up a random color
 ![Create Organization](https://github.com/alvastein/one-record-workshop/assets/168312567/04c07578-c28a-4390-9c53-10056e4be4b3)
 
-3. Now you can start creating objects using NE:ONE Play. Create your first object by selecting its type and organization from the dropdown lists
-4. Click the plus button to save
+Now you can start creating objects using NE:ONE Play. 
 
+
+## Create your first object and use NE:ONE Play
+
+1. Create your first object by selecting its type and organization from the dropdown lists. Click the plus button to save
+![Create Object](https://github.com/alvastein/one-record-workshop/assets/168312567/d9906005-e49e-47d0-9d97-4cbddd86feed)
+
+2. Close the window and click anywhere on the canvas to visualize the object just created
+![Object Created](https://github.com/alvastein/one-record-workshop/assets/168312567/de0f7c9c-8f6f-4b3b-9b7b-a5f6468cce4c)
 
 Happy data sharing!
