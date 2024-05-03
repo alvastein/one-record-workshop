@@ -7,7 +7,6 @@ Welcome to the IAM ONE Record Workshop, in this document you will find all the i
 - Download and install [Docker](https://docs.docker.com/get-docker/). Setting up an account is not required.
 - For Windows and some Linux computers: download and install [Git](https://git-scm.com/downloads). Setting up an account is not required. Git is installed by default on latest versions of Mac OSX.
 - Download, install [Postman](https://www.postman.com/downloads/) and create a free user account.
-- Optional: use a tool like [Protegé](https://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/) to navigate the ontology TTL file.
 
 ## Resources
 - [Data Model and Ontology Visualizer](https://aloccid-iata.github.io/ontology_visualizer/)
