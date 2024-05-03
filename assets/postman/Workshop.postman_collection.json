@@ -1,84 +1,73 @@
 {
 	"info": {
-		"_postman_id": "04bb4bea-d356-4284-abbb-72d829fd292f",
+		"_postman_id": "b6bf1ebc-918b-471a-b228-030362630252",
 		"name": "Workshop",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "33467733"
 	},
 	"item": [
 		{
-			"name": "Authentication",
-			"item": [
-				{
-					"name": "Token Request",
-					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": {
-								"username": "neone-client",
-								"password": "lx7ThS5aYggdsMm42BP3wMrVqKm9WpNY"
-							}
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/x-www-form-urlencoded",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "grant_type",
-									"value": "client_credentials",
-									"type": "text"
-								},
-								{
-									"key": "client_id",
-									"value": "neone-client",
-									"type": "text"
-								},
-								{
-									"key": "scope",
-									"value": "ne-one-resource-server/openid",
-									"type": "text",
-									"disabled": true
-								}
-							]
-						},
-						"url": "{{baseUrlKeyCloak}}/realms/neone/protocol/openid-connect/token"
-					},
-					"response": []
+			"name": "Token Request",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "neone-client",
+						"password": "lx7ThS5aYggdsMm42BP3wMrVqKm9WpNY"
+					}
 				},
-				{
-					"name": "Get ServerInformation",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGYzdaSHZUNGozbldNenZkX2xuYUsySGZWWnUtYWtBLTB0TGMwLVgwc1BZIn0.eyJleHAiOjE3MTQ2NjQ4OTMsImlhdCI6MTcxNDYyODg5MywianRpIjoiYjlkMDMxNmQtZjhlMC00OGE3LTkwNzEtMjQzZmEzMTFkODg0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4OTg5L3JlYWxtcy9uZW9uZSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiIwYWU4OThmMy1kMjQ4LTRlYWMtODY4MS1iMDM4MWM4MmQ2YzAiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJuZW9uZS1jbGllbnQiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1uZW9uZSIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwiY2xpZW50SG9zdCI6IjE5Mi4xNjguNjUuMSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibG9naXN0aWNzX2FnZW50X3VyaSI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9sb2dpc3RpY3Mtb2JqZWN0cy9fZGF0YS1ob2xkZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtbmVvbmUtY2xpZW50IiwiY2xpZW50QWRkcmVzcyI6IjE5Mi4xNjguNjUuMSIsImNsaWVudF9pZCI6Im5lb25lLWNsaWVudCJ9.4Emk0xEn2K7N-Zp1Jote4IYGB__Hxp6we5j1vGW8gT8hQpezUOCWmd3-AwfJDQWwOaVgPDt_N5CHft4w8Ik7Rlxys6iWEB0dvLOu2j2UH-SX1WlLIbCJb3KV6wg4A_dP2Ow-aiJnX8zrsf9PABrJw2cU3tkRthtNGU0CvDIF4i9cBw22ynHEQeQ6Gw6y3beD622feb1HQdXYzDbmpuFkvsaASHkIbf_WF78MAfzSzM1rIi14fy-nsXbTDsNWutMZldO4fxbhOR9ldUwhOl_tc_AcJQ81E2dGozakD8kngJP6LPXu1W6zywWuRS8qkOXyJWwk26J24d1dX4rOKt45wg"
-							}
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"uuid": "7dd5ae08-fee1-469f-9e14-b44b5484ea8b"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
 						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/ld+json",
-								"type": "default"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/ld+json",
-								"type": "text"
-							}
-						],
-						"url": "{{baseUrlOneRecord}}"
+						{
+							"key": "client_id",
+							"value": "neone-client",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "ne-one-resource-server/openid",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": "{{baseUrlKeyCloak}}/realms/neone/protocol/openid-connect/token"
+			},
+			"response": []
+		},
+		{
+			"name": "Get ServerInformation",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/ld+json",
+						"uuid": "3d902058-4df2-44e3-babf-972084e2ead6"
 					},
-					"response": []
-				}
-			]
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"uuid": "97ebf411-11b9-4090-a236-fed1f9fa6954"
+					}
+				],
+				"url": "{{baseUrlOneRecord}}"
+			},
+			"response": []
 		},
 		{
 			"name": "HHG type Chair",
@@ -119,14 +108,13 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/ld+json",
-						"type": "text"
+						"uuid": "07144386-ad51-4203-b7dc-61c50b9a7352"
 					},
 					{
 						"key": "Accept",
 						"value": "application/ld+json",
-						"type": "text"
+						"uuid": "8461e55f-df65-4e4f-87fd-2fec16b96769"
 					}
 				],
 				"body": {
@@ -181,14 +169,13 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/ld+json; version=2.0.0-dev",
-						"type": "text"
+						"uuid": "4aaf2b2d-d60c-4080-a15b-cc898a5435a6"
 					},
 					{
 						"key": "Accept",
 						"value": "application/ld+json; version=2.0.0-dev",
-						"type": "text"
+						"uuid": "10bafe81-69a5-48d4-96b8-0c4f13943da2"
 					}
 				],
 				"body": {
@@ -243,14 +230,13 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/ld+json; version=2.0.0-dev",
-						"type": "text"
+						"uuid": "b6ebe9a3-e58d-4794-a08e-becb3f08cc97"
 					},
 					{
 						"key": "Accept",
 						"value": "application/ld+json; version=2.0.0-dev",
-						"type": "text"
+						"uuid": "0c5aada2-6459-418c-ba5c-538a7cfe58ca"
 					}
 				],
 				"body": {
@@ -305,14 +291,13 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/ld+json; version=2.0.0-dev",
-						"type": "text"
+						"uuid": "a9b0a509-73e5-4a7a-8562-3f3de9188265"
 					},
 					{
 						"key": "Accept",
 						"value": "application/ld+json; version=2.0.0-dev",
-						"type": "text"
+						"uuid": "0123c90e-8dd9-4bfa-821b-318bcb7af705"
 					}
 				],
 				"body": {
@@ -366,14 +351,13 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/ld+json; version=2.0.0-dev",
-						"type": "text"
+						"uuid": "a39b2072-2efa-4445-bae4-699b002da962"
 					},
 					{
 						"key": "Accept",
 						"value": "application/ld+json; version=2.0.0-dev",
-						"type": "text"
+						"uuid": "b124c80b-3404-4057-9f81-8931934efa49"
 					}
 				],
 				"body": {
@@ -428,14 +412,13 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/ld+json; version=2.0.0-dev",
-						"type": "text"
+						"uuid": "22722661-cefd-4d28-ac84-bb08ebdf0ed7"
 					},
 					{
 						"key": "Accept",
 						"value": "application/ld+json; version=2.0.0-dev",
-						"type": "text"
+						"uuid": "e2bb109c-fece-47e3-8b29-e60010cf4414"
 					}
 				],
 				"body": {
@@ -490,14 +473,13 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/ld+json; version=2.0.0-dev",
-						"type": "text"
+						"uuid": "99812501-b7d3-46c9-b09b-42f005cd2a67"
 					},
 					{
 						"key": "Accept",
 						"value": "application/ld+json; version=2.0.0-dev",
-						"type": "text"
+						"uuid": "b40876fb-94a8-4fcb-b4be-e28297e08bae"
 					}
 				],
 				"body": {
@@ -552,14 +534,13 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/ld+json; version=2.0.0-dev",
-						"type": "text"
+						"uuid": "e90101c9-9214-480f-a49b-bd85de917809"
 					},
 					{
 						"key": "Accept",
 						"value": "application/ld+json; version=2.0.0-dev",
-						"type": "text"
+						"uuid": "7bf1005d-81e6-4a4d-8685-03440bb2cc9b"
 					}
 				],
 				"body": {
@@ -614,14 +595,13 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/ld+json; version=2.0.0-dev",
-						"type": "text"
+						"uuid": "c68a6122-4057-43fa-8253-96e0b74948e3"
 					},
 					{
 						"key": "Accept",
 						"value": "application/ld+json; version=2.0.0-dev",
-						"type": "text"
+						"uuid": "34a8af91-e21d-404a-90b8-61ee9e6a1e1a"
 					}
 				],
 				"body": {
@@ -675,14 +655,13 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/ld+json; version=2.0.0-dev",
-						"type": "text"
+						"uuid": "265a7f19-b2d9-4404-8962-e6706ce570b0"
 					},
 					{
 						"key": "Accept",
 						"value": "application/ld+json; version=2.0.0-dev",
-						"type": "text"
+						"uuid": "2333f6ae-837e-4f83-b2f1-4a238bab7585"
 					}
 				],
 				"body": {
@@ -725,14 +704,13 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/ld+json; version=2.0.0-dev",
-						"type": "text"
+						"uuid": "585b221d-e7dd-401b-b2c6-ea9a3891b8fb"
 					},
 					{
 						"key": "Accept",
 						"value": "application/ld+json; version=2.0.0-dev",
-						"type": "text"
+						"uuid": "4f5d81d1-f20e-4e5a-bf47-36d26046dbbc"
 					}
 				],
 				"body": {
@@ -757,12 +735,41 @@
 					"variable": [
 						{
 							"key": "logisticObjectId",
-							"value": "shipmentFranceAustralia"
+							"value": "shipmentFranceAustralia",
+							"uuid": "ccfe2fb3-9405-4740-bd8d-13c58d2ff600"
 						}
 					]
 				}
 			},
 			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJGYzdaSHZUNGozbldNenZkX2xuYUsySGZWWnUtYWtBLTB0TGMwLVgwc1BZIn0.eyJleHAiOjE3MTQ3OTgwMjAsImlhdCI6MTcxNDc2MjAyMCwianRpIjoiMGE2YWI3MmUtNWNhYy00NjEyLWI1OTEtMzZkZDc2MmNjN2U0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4OTg5L3JlYWxtcy9uZW9uZSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiIwYWU4OThmMy1kMjQ4LTRlYWMtODY4MS1iMDM4MWM4MmQ2YzAiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJuZW9uZS1jbGllbnQiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1uZW9uZSIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwiY2xpZW50SG9zdCI6IjE5Mi4xNjguNjUuMSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibG9naXN0aWNzX2FnZW50X3VyaSI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9sb2dpc3RpY3Mtb2JqZWN0cy9fZGF0YS1ob2xkZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtbmVvbmUtY2xpZW50IiwiY2xpZW50QWRkcmVzcyI6IjE5Mi4xNjguNjUuMSIsImNsaWVudF9pZCI6Im5lb25lLWNsaWVudCJ9.q6kqmY7z0CdbI5enbKBsiljkw-E85UjBGy-QA7Y0mrrAGIG-9t_ZCOZpSbRRP8jhwq36jbj_4O-BNhNIFbIb8XU5mCXC21su4OzHhESl_MRE82NG4iX1JKoLjUWdbf8IQke1Kh5CP6dKisFKyxM4uFfyPcSvkEo3vWDo55cl2QH0Shd-JqMMaLrDYS-tpuygb5iSFGmiNFd-qCiNsuIAYzb-2o8MZLWUVHPa7xBTwQCU8I80xXXf5fC1ptpbigqSjIFLTS0neu3uD0njv6uICZH_EZDz0VMf0-im8IU8Vn6Zent7T6Zcs_e2emdmbWVJGpiUmwsIaddmiDjQuz9ISQ"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
 		}
 	],
 	"variable": [
